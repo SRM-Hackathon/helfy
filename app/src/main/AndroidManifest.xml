@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Bot" />
+        <activity android:name=".Search"/>
         <activity
             android:name=".Dashboard"
             android:label="@string/title_activity_dashboard"

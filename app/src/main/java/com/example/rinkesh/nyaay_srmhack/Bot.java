@@ -1,5 +1,6 @@
  package com.example.rinkesh.nyaay_srmhack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -54,6 +55,18 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
                                 public void onResponse(MessageResponse response) {
                                     final String outputText = response.getText().get(0);
 
+                                    if(response.getIntents().get(0).getIntent()
+                                            .endsWith("Search")) {
+
+                                        final String inputquery = response.getInputText();
+
+                                        Intent i = new Intent(Bot.this,Search.class);
+                                        i.putExtra(inputquery,"input");
+                                        i.putExtra("B","input");
+                                        startActivity(i);
+
+                                    }
+
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
@@ -77,9 +90,4 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
 
     }
 
-    public void test(String message){
-
-        Toast.makeText(Bot.this,message,Toast.LENGTH_SHORT).show();
-
-    }
 }
