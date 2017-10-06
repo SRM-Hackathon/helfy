@@ -3,6 +3,7 @@ package com.example.rinkesh.nyaay_srmhack;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -31,7 +32,8 @@ public class Search extends AppCompatActivity {
 
     ArrayList<String> title = new ArrayList<String>();
     ArrayList<String> link = new ArrayList<String>();
-    String input,type,pgnum="4";
+    ArrayList<String> details = new ArrayList<String>();
+    String input,type,pgnum="0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class Search extends AppCompatActivity {
     public void request() {
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        final String url = "https://api.indiankanoon.org/search/?formInput="+input+"&pagenum="+pgnum+"&maxpage=4";
+        final String url = "https://api.indiankanoon.org/search/?formInput=law&pagenum="+pgnum+"&maxpage=4";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -66,7 +68,8 @@ public class Search extends AppCompatActivity {
 
                         JSONObject post = jsonArray.getJSONObject(i);
 
-                        title.add(post.getString("title"));
+                        title.add(String.valueOf(Html.fromHtml(post.getString("title"))));
+                        details.add(String.valueOf((Html.fromHtml(post.getString("headline")))));
                         link.add(post.getString("url"));
 
 
@@ -78,12 +81,13 @@ public class Search extends AppCompatActivity {
 
                         HashMap<String,String> hm = new HashMap<String,String>();
                         hm.put("title",title.get(i));
+                        hm.put("details",details.get(i));
                         list.add(hm);
 
                     }
 
-                    String[] from ={"title"};
-                    int[] to = {R.id.title};
+                    String[] from ={"title","details"};
+                    int[] to = {R.id.title,R.id.details};
 
                     SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(),list,R.layout.search_element_layout,from,to);
                     ListView listView = (ListView) findViewById(R.id.listview);
