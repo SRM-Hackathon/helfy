@@ -28,7 +28,9 @@
             android:name=".Dashboard"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Status"></activity>
+        <activity android:name=".Status" />
+        <activity android:name=".CauseList" />
+        <activity android:name=".FileFIR"></activity>
     </application>
 
 </manifest>

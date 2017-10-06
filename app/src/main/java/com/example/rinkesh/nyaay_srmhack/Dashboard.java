@@ -1,5 +1,6 @@
 package com.example.rinkesh.nyaay_srmhack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -84,7 +85,15 @@ public class Dashboard extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.status) {
 
+            Intent statusintent = new Intent(this, Status.class);
+            startActivity(statusintent);
+
         } else if (id == R.id.mycase) {
+
+        } else if (id == R.id.causelist) {
+
+            Intent causelistIntent = new Intent(this, CauseList.class);
+            startActivity(causelistIntent);
 
         } else if (id == R.id.moreinfo) {
 

@@ -13,4 +13,9 @@
     <string name="casestatus">Case Status</string>
     <string name="mycases">My Cases</string>
     <string name="more">More Info</string>
+    <string name="party">Party</string>
+    <string name="FilingNumber">Filing Number</string>
+    <string name="fir">FIR Status</string>
+    <string name="type">Type</string>
+    <string name="causelist">Cause List</string>
 </resources>

@@ -14,6 +14,12 @@
             android:id="@+id/mycase"
             android:icon="@drawable/mycase"
             android:title="@string/mycases" />
+
+        <item
+            android:id="@+id/causelist"
+            android:icon="@drawable/mycase"
+            android:title="@string/causelist" />
+
         <item
             android:id="@+id/moreinfo"
             android:icon="@drawable/more"

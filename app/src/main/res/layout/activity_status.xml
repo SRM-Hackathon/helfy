@@ -47,13 +47,62 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/hammer"
+                    android:src="@drawable/party"
                     android:layout_marginStart="80dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/casestatus"
+                    android:text="@string/party"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginStart="80dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more"
+                    android:layout_marginStart="80dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/FilingNumber"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginStart="80dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:onClick="FirClick">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/policeman"
+                    android:layout_marginStart="80dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fir"
                     android:layout_marginLeft="80dp"
                     android:layout_marginStart="80dp"/>
 
@@ -101,55 +150,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/casestatus"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginStart="80dp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/hammer"
-                    android:layout_marginStart="80dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/casestatus"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginStart="80dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/hammer"
-                    android:layout_marginStart="80dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/casestatus"
+                    android:text="@string/type"
                     android:layout_marginLeft="80dp"
                     android:layout_marginStart="80dp"/>
 
@@ -159,3 +160,7 @@
     </LinearLayout>
 
 </RelativeLayout>
+
+
+
+

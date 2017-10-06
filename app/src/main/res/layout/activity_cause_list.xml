@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rinkesh.nyaay_srmhack.CauseList">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CauseList/Daily Board"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"/>
+
+
+
+    <TextView
+        android:id="@+id/typetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type of court*"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/edittype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typetext"/>
+
+    <TextView
+        android:id="@+id/courttext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittype"
+        android:text="Court Name*"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="serif"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/editcourt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courttext"/>
+
+    <TextView
+        android:id="@+id/dateview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editcourt"
+        android:layout_marginTop="30dp"
+        android:text="CauseList Date*"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp" />
+
+    <EditText
+        android:id="@+id/editdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateview"
+        android:inputType="date"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/editdate">
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
