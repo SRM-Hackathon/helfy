@@ -18,4 +18,14 @@
     <string name="fir">FIR Status</string>
     <string name="type">Type</string>
     <string name="causelist">Cause List</string>
+
+    <string name="FACEBOOK_APP_ID">2021610788068986</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">06cfa7ba5b468d2c023c81ade6f5c3fd</string>
+    <string name="permissions_receive_sms_title">Read Phone Number</string>
+    <string name="permissions_receive_sms_message">Grant permission to read your SMS code from your device to pre-fill.</string>
+    <string name="permissions_read_phone_state_title">Read Phone Number</string>
+    <string name="permissions_get_accounts_title">a</string>
+    <string name="permissions_get_accounts_message">b</string>
+    <string name="permissions_read_phone_state_message">c</string>
+    <string name="na">Na</string>
 </resources>

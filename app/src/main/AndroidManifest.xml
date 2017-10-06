@@ -24,14 +24,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".Bot" />
-        <activity android:name=".Search"/>
+        <activity android:name=".Search" />
         <activity
             android:name=".Dashboard"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Status" />
         <activity android:name=".CauseList" />
-        <activity android:name=".FileFIR"></activity>
+        <activity android:name=".FileFIR" />
+        <activity android:name=".Authentication.ErrorActivity"></activity>
     </application>
 
 </manifest>
