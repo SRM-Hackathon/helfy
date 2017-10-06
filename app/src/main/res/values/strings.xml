@@ -9,4 +9,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="casestatus">Case Status</string>
+    <string name="mycases">My Cases</string>
+    <string name="more">More Info</string>
 </resources>

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void botclick(View view) {
 
-        Intent intent = new Intent(this, Bot.class);
+        Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
 }
