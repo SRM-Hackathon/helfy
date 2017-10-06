@@ -13,4 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void botclick(View view) {
+
+        Intent intent = new Intent(this, Bot.class);
+        startActivity(intent);
+    }
 }

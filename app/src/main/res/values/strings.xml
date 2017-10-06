@@ -3,4 +3,10 @@
     <string name="username">599a63f8-d561-4840-910b-a301ea4957e6</string>
     <string name="password">OdzjOZr4ECff</string>
     <string name="workspace">28d9015c-cc6c-4b90-8108-6bab184df941</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
