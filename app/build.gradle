@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.example.rinkesh.nyaay_srmhack"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -25,7 +25,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.ibm.watson.developer_cloud:java-sdk:3.7.2'
-    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.github.kittinunf.fuel:fuel-android:1.9.0'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
