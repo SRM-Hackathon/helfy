@@ -6,6 +6,7 @@ import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ibm.watson.developer_cloud.conversation.v1.ConversationService;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageRequest;
@@ -20,14 +21,14 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bot);
 
+        final TextView conversation = (TextView) findViewById(R.id.coversation);
+        final EditText userInput = (EditText) findViewById(R.id.user_input);
+
         final ConversationService myCoversationServices = new ConversationService(
-                "2017-10-10",
+                "2017-05-26",
                 getString(R.string.username),
                 getString(R.string.password)
         );
-
-        final TextView conversation = (TextView) findViewById(R.id.coversation);
-        final EditText userInput = (EditText) findViewById(R.id.user_input);
 
         userInput.setOnEditorActionListener(new TextView.OnEditorActionListener(){
 
@@ -51,8 +52,7 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
                             .enqueue(new ServiceCallback<MessageResponse>() {
                                 @Override
                                 public void onResponse(MessageResponse response) {
-
-                                    final String outputText = response.getText().get(1);
+                                    final String outputText = response.getText().get(0);
 
                                     runOnUiThread(new Runnable() {
                                         @Override
@@ -67,7 +67,6 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
 
                                 @Override
                                 public void onFailure(Exception e) {
-
                                 }
 
                             });
@@ -75,6 +74,12 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
                 return false;
             }
         });
+
+    }
+
+    public void test(String message){
+
+        Toast.makeText(Bot.this,message,Toast.LENGTH_SHORT).show();
 
     }
 }
