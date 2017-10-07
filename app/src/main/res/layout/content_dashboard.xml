@@ -8,6 +8,52 @@
     tools:context="com.example.rinkesh.nyaay_srmhack.Dashboard"
     tools:showIn="@layout/app_bar_dashboard">
 
+     <TextView
+         android:id="@+id/header"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="File or know about a Case"
+         android:gravity="center"
+         android:fontFamily="serif"
+         android:layout_marginTop="20dp"
+         android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/whenedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:hint="When it happened"
+        android:fontFamily="serif"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/whereedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Where it happened?"
+        android:fontFamily="serif"
+        android:layout_below="@+id/whenedit"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category"
+        android:fontFamily="serif"
+        android:layout_below="@+id/whereedit"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/typetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type"
+        android:fontFamily="serif"
+        android:layout_below="@+id/category"
+        android:layout_marginTop="20dp"/>
+
 
 
 
