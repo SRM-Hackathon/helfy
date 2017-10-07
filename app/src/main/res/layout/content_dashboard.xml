@@ -31,7 +31,7 @@
         android:id="@+id/whenedit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="When it happened"
+        android:hint="Date of Crime"
         android:fontFamily="serif"
         android:layout_marginTop="20dp"
         android:inputType="date" />
@@ -44,7 +44,7 @@
         android:fontFamily="serif"
         android:layout_marginTop="20dp" />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:fontFamily="serif"
         android:layout_marginTop="20dp"/>
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/typetext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,6 +77,7 @@
         android:layout_marginTop="20dp" />
 
     <Button
+        android:onClick="confirmupload"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rect"

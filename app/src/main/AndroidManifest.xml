@@ -32,7 +32,9 @@
         <activity android:name=".Status" />
         <activity android:name=".CauseList" />
         <activity android:name=".FileFIR" />
-        <activity android:name=".Authentication.ErrorActivity"></activity>
+        <activity android:name=".Authentication.ErrorActivity" />
+        <activity android:name=".Webview" />
+        <activity android:name=".Mycases"></activity>
     </application>
 
 </manifest>

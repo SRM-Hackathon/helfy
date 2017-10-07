@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -31,6 +32,8 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class Search extends AppCompatActivity {
 
+    ListView listView;
+
     ArrayList<String> title = new ArrayList<String>();
     ArrayList<String> link = new ArrayList<String>();
     ArrayList<String> details = new ArrayList<String>();
@@ -42,6 +45,7 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         Intent intent = getIntent();
+        listView = (ListView) findViewById(R.id.listview);
         input = intent.getExtras().getString("input");
         type = intent.getExtras().getString("type");
         num = 0;
@@ -57,6 +61,17 @@ public class Search extends AppCompatActivity {
         }
 
         request();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent intentl = new Intent(Search.this,Webview.class);
+                intentl.putExtra("url",link.get(i));
+                startActivity(intentl);
+
+            }
+        });
     }
 
     public void alert(String text) {
@@ -103,7 +118,6 @@ public class Search extends AppCompatActivity {
                     int[] to = {R.id.title,R.id.details};
 
                     SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(),list,R.layout.search_element_layout,from,to);
-                    ListView listView = (ListView) findViewById(R.id.listview);
                     listView.setAdapter(simpleAdapter);
 
                 } catch (JSONException e) {

@@ -24,8 +24,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="serif"
         android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:background=""/>
+        android:layout_marginLeft="10dp" />
 
     <EditText
         android:id="@+id/edittype"
