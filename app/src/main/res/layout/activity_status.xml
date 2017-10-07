@@ -25,6 +25,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:onClick="FirClick"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/info"
@@ -68,6 +69,7 @@
             android:layout_marginTop="30dp">
 
             <LinearLayout
+                android:onClick="FirClick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -111,6 +113,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:onClick="FirClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

@@ -266,6 +266,9 @@ public class Dashboard extends AppCompatActivity
 
         } else if (id == R.id.mycase) {
 
+            Intent statusintent = new Intent(this, Mycases.class);
+            startActivity(statusintent);
+
         } else if (id == R.id.causelist) {
 
             Intent causelistIntent = new Intent(this, CauseList.class);

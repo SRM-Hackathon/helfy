@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Application No: 0004"
+            android:textSize="9pt"
+            android:background="@drawable/header"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/body">
+
+            <TextView
+                android:id="@+id/priority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Priority: High"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="8pt"
+                android:textColor="@color/ebonyclay"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date Schedule: 07-10-2017"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="8pt"
+                android:textColor="@color/ebonyclay"/>
+
+            <TextView
+                android:id="@+id/court"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Court : CHENNAI CRIMINAL CASE"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="8pt"
+                android:textColor="@color/ebonyclay"/>
+
+            <TextView
+                android:id="@+id/judge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judge: Mrs. Meenakshi Odwali"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="8pt"
+                android:textColor="@color/ebonyclay"/>
+
+            <TextView
+                android:id="@+id/oppo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opposition: Mr. Rakosh kumar"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="8pt"
+                android:textColor="@color/ebonyclay"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
