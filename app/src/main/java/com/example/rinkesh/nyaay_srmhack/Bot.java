@@ -61,8 +61,8 @@ import com.ibm.watson.developer_cloud.http.ServiceCallback;
                                         final String inputquery = response.getInputText();
 
                                         Intent i = new Intent(Bot.this,Search.class);
-                                        i.putExtra(inputquery,"input");
-                                        i.putExtra("B","input");
+                                        i.putExtra("input",inputquery);
+                                        i.putExtra("type","B");
                                         startActivity(i);
 
                                     }

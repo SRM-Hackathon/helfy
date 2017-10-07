@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class Search extends AppCompatActivity {
     ArrayList<String> link = new ArrayList<String>();
     ArrayList<String> details = new ArrayList<String>();
     String input,type,pgnum="0";
+    int num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,20 +44,31 @@ public class Search extends AppCompatActivity {
         Intent intent = getIntent();
         input = intent.getExtras().getString("input");
         type = intent.getExtras().getString("type");
+        num = 0;
 
         if (type=="B"){
 
-            input = input.replace("Search","");
+            String edit;
+
+            edit = input.replace("Search ","");
+
+            input = edit;
 
         }
 
         request();
     }
 
+    public void alert(String text) {
+
+        Toast.makeText(Search.this, text, Toast.LENGTH_LONG).show();
+
+    }
+
     public void request() {
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        final String url = "https://api.indiankanoon.org/search/?formInput=law&pagenum="+pgnum+"&maxpage=4";
+        final String url = "https://api.indiankanoon.org/search/?formInput="+input+"&pagenum="+pgnum+"&maxpage=4";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -124,6 +137,21 @@ public class Search extends AppCompatActivity {
 
     }
 
+    public void next(View view) {
+
+        num++;
+
+        pgnum = String.valueOf(num);
+
+        title.removeAll(title);
+
+        link.removeAll(link);
+
+        details.removeAll(details);
+
+        request();
+
+    }
 
     public void test () {
 
